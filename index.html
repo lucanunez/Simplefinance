@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleFinance - Aprende Finanzas e Inversiones Jugando</title>
+  <meta name="description" content="Aprende finanzas personales e inversiones de manera fácil, interactiva y gamificada estilo Duolingo. Diseñado para el mercado de Argentina.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="app-container">
+    
+    <!-- Barra Lateral (Sidebar) - Desktop -->
+    <aside id="sidebar">
+      <div class="logo-container">
+        <div class="logo-icon">
+          <!-- SVG Book Icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="logo-text">SimpleFinance</span>
+      </div>
+
+      <nav class="nav-menu">
+        <li class="nav-item">
+          <button id="nav-pf" class="nav-link active">
+            <!-- Icon Piggy Bank -->
+            <svg viewBox="0 0 24 24">
+              <path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 9v6m-3-3h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Finanzas Personales</span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button id="nav-inv" class="nav-link">
+            <!-- Icon Trend Up / Investments -->
+            <svg viewBox="0 0 24 24">
+              <path d="M22 7 13.5 15.5 8.5 10.5 2 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 7h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Inversiones</span>
+          </button>
+        </li>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="glossary-btn" class="glossary-trigger-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V5A2.5 2.5 0 0 1 6.5 2.5H20M14 6h4m-4 4h4m-4 4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Glosario
+        </button>
+      </div>
+    </aside>
+
+    <!-- Botón flotante para el glosario en Mobile -->
+    <button id="mobile-glossary-btn" class="mobile-glossary-btn" aria-label="Abrir Glosario">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V5A2.5 2.5 0 0 1 6.5 2.5H20M14 6h4m-4 4h4m-4 4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <!-- Área de Contenido Principal -->
+    <main id="main-content">
+      
+      <!-- Header Superior con Estadísticas -->
+      <header id="top-header">
+        <div class="page-title-area">
+          <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <h1 id="path-title">Finanzas Personales</h1>
+            <button id="header-reset-btn" class="reset-btn" style="margin: 0; padding: 4px 10px; font-size: 0.75rem; border: 1px solid var(--glass-border); border-radius: 8px; background: var(--glass-bg); text-decoration: none; display: flex; align-items: center; gap: 4px; font-family: var(--font-body); font-weight: 500; color: var(--text-secondary); cursor: pointer;" title="Reiniciar todo tu progreso">
+              <svg viewBox="0 0 24 24" style="width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8m0-4v4h4"/></svg>
+              <span>Reiniciar</span>
+            </button>
+          </div>
+          <p id="path-subtitle">Aprende los métodos esenciales de ahorro y supera las deudas.</p>
+        </div>
+        
+        <div class="stats-container">
+          <div class="stat-badge streak" title="Racha de días de estudio consecutivos">
+            <span>🔥</span> <span id="stat-streak-val">0</span> días
+          </div>
+          <div class="stat-badge xp" title="Puntos de experiencia ganados">
+            <span>⭐</span> <span id="stat-xp-val">0</span> XP
+          </div>
+          <div class="stat-badge level" id="stat-profile-badge" style="display: none;" title="Tu perfil de inversor asignado">
+            <span>🛡️</span> <span id="stat-profile-val">Sin Perfil</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Camino 1: Finanzas Personales -->
+      <section id="pf-path-view" class="path-view active">
+        <div class="path-timeline" id="pf-timeline">
+          <!-- Renderizado dinámico desde JS -->
+        </div>
+      </section>
+
+      <!-- Camino 2: Inversiones -->
+      <section id="inv-path-view" class="path-view">
+        <div class="path-timeline" id="inv-timeline">
+          <!-- Renderizado dinámico desde JS -->
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ================= DIÁLOGOS NATIVOS (<dialog>) ================= -->
+
+  <!-- 1. MODAL DE LECCIONES E INTERACTIVIDAD -->
+  <dialog id="lesson-modal">
+    <div class="dialog-content">
+      <button class="close-modal-btn" id="close-lesson-modal" aria-label="Cerrar lección">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <!-- Contenedor general de lección -->
+      <div id="lesson-modal-inner">
+        <!-- Renderizado dinámico desde app.js (Slides de lectura, Preguntas, Celebración) -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- 2. MODAL DEL GLOSARIO -->
+  <dialog id="glossary-modal">
+    <div class="dialog-content">
+      <button class="close-modal-btn" id="close-glossary-modal" aria-label="Cerrar glosario">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="glossary-header">
+        <h2 class="glossary-title">Diccionario de Finanzas</h2>
+        <p class="glossary-desc">Busca y aclara los términos técnicos explicados en lenguaje extremadamente simple.</p>
+      </div>
+
+      <!-- Buscador -->
+      <div class="search-wrapper">
+        <svg class="search-icon-svg" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <input type="text" id="glossary-search" class="search-input" placeholder="Escribe un término (ej. Plazo Fijo, Cedear, Pago Mínimo)..." autocomplete="off">
+      </div>
+
+      <!-- Categorías (Tabs) -->
+      <div class="glossary-tabs">
+        <button class="glossary-tab-btn active" data-tab="all">Todos</button>
+        <button class="glossary-tab-btn" data-tab="finance">Finanzas Personales</button>
+        <button class="glossary-tab-btn" data-tab="investments">Inversiones</button>
+      </div>
+
+      <!-- Grid de Términos -->
+      <div class="glossary-grid" id="glossary-grid-container">
+        <!-- Renderizado dinámico desde app.js -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Script modular de lógica -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
