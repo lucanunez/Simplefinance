@@ -742,12 +742,16 @@ function createVisualDiagram(type) {
     `;
   } else if (type === 'plazo-fijo-uva') {
     container.innerHTML = `
-      <div class="visual-shield">📈🛡️</div>
+      <div class="visual-shield" style="font-size: 2.8rem; gap: 0.5rem; display: flex; align-items: center; justify-content: center;">
+        <span>📈</span><span>🛡️</span>
+      </div>
       <span class="visual-title" style="color: var(--color-conservative); font-weight: 700;">Tus pesos atados a la Inflación + 1%</span>
     `;
   } else if (type === 'time-lock') {
     container.innerHTML = `
-      <div style="font-size: 4.5rem; animation: bounce-piggy 3s infinite ease-in-out;">🔒📅</div>
+      <div style="font-size: 3.5rem; gap: 0.5rem; display: flex; align-items: center; justify-content: center; animation: bounce-piggy 3s infinite ease-in-out;">
+        <span>🔒</span><span>📅</span>
+      </div>
       <span class="visual-title">UVA inmoviliza tus fondos por 90 días</span>
     `;
   } else if (type === 'lecap-intro') {
@@ -760,7 +764,9 @@ function createVisualDiagram(type) {
     `;
   } else if (type === 'lecap-growth') {
     container.innerHTML = `
-      <div style="font-size: 4.5rem;">📈⚙️</div>
+      <div style="font-size: 3.5rem; gap: 0.5rem; display: flex; align-items: center; justify-content: center;">
+        <span>📈</span><span>⚙️</span>
+      </div>
       <span class="visual-title">Los intereses se reinvierten mensualmente</span>
     `;
   } else if (type === 'market-liquidity') {
@@ -773,7 +779,9 @@ function createVisualDiagram(type) {
     `;
   } else if (type === 'fci-concept') {
     container.innerHTML = `
-      <div style="font-size: 4.5rem; animation: float-shield 3s infinite ease-in-out;">👥💰🍯</div>
+      <div style="font-size: 3.2rem; gap: 0.5rem; display: flex; align-items: center; justify-content: center; animation: float-shield 3s infinite ease-in-out;">
+        <span>👥</span><span>💰</span><span>🍯</span>
+      </div>
       <span class="visual-title">Un pozo de dinero para todos</span>
     `;
   } else if (type === 'diversification-visual') {
@@ -804,7 +812,9 @@ function createVisualDiagram(type) {
     `;
   } else if (type === 'bond-intro') {
     container.innerHTML = `
-      <div style="font-size: 4rem;">📜🤝💵</div>
+      <div style="font-size: 3.2rem; gap: 0.5rem; display: flex; align-items: center; justify-content: center;">
+        <span>📜</span><span>🤝</span><span>💵</span>
+      </div>
       <span class="visual-title">Prestar dinero a cambio de cupones de interés</span>
     `;
   } else if (type === 'gov-bonds') {
@@ -828,7 +838,9 @@ function createVisualDiagram(type) {
     `;
   } else if (type === 'usd-passive') {
     container.innerHTML = `
-      <div style="font-size: 4rem; animation: float-shield 3s infinite ease-in-out;">💼➡️🇺🇸💲</div>
+      <div style="font-size: 2.5rem; gap: 0.5rem; display: flex; align-items: center; justify-content: center; animation: float-shield 3s infinite ease-in-out;">
+        <span>💼</span><span>➡️</span><span>🇺🇸</span><span>💲</span>
+      </div>
       <span class="visual-title" style="color: var(--color-conservative); font-weight: 700;">¡Cobrar intereses en Dólares Billete!</span>
     `;
   } else if (type === 'cedear-concept') {
@@ -849,7 +861,9 @@ function createVisualDiagram(type) {
     `;
   } else if (type === 'currency-shield') {
     container.innerHTML = `
-      <div class="visual-shield" style="border-color: var(--color-risky); box-shadow: 0 0 20px rgba(255,23,68,0.3);">🛡️💵</div>
+      <div class="visual-shield" style="border-color: var(--color-risky); box-shadow: 0 0 20px rgba(255,23,68,0.3); font-size: 2.8rem; gap: 0.5rem; display: flex; align-items: center; justify-content: center;">
+        <span>🛡️</span><span>💵</span>
+      </div>
       <span class="visual-title" style="color: var(--color-risky); font-weight: 700;">Protección contra la devaluación</span>
     `;
   } else if (type === 'volatility-visual') {
@@ -867,7 +881,9 @@ function createVisualDiagram(type) {
     `;
   } else if (type === 'dividends') {
     container.innerHTML = `
-      <div style="font-size: 4rem;">🤝💵💰</div>
+      <div style="font-size: 3.2rem; gap: 0.5rem; display: flex; align-items: center; justify-content: center;">
+        <span>🤝</span><span>💵</span><span>💰</span>
+      </div>
       <span class="visual-title">Cobro de dividendos (reparto de utilidades)</span>
     `;
   } else if (type === 'merval-chart') {
