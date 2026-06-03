@@ -242,8 +242,9 @@ function renderTimeline(type, lessonsList, container) {
       if (lesson.id === 'pf_2') emoji = '🐷'; // Ahorro 10%
       if (lesson.id === 'pf_3') emoji = '📈'; // 1% mensual
       if (lesson.id === 'pf_4') emoji = '💼'; // Ahorra lo que puedas
-      if (lesson.id === 'pf_5') emoji = '💳'; // Tarjeta de crédito
-      if (lesson.id === 'pf_6') emoji = '❄️'; // Bola de nieve/avalancha
+      if (lesson.id === 'pf_5') emoji = '🛟'; // Fondo de emergencia
+      if (lesson.id === 'pf_6') emoji = '💳'; // Tarjeta de crédito
+      if (lesson.id === 'pf_7') emoji = '❄️'; // Bola de nieve/avalancha
       
       if (lesson.id === 'inv_2') emoji = '🏦'; // Plazo Fijo
       if (lesson.id === 'inv_3') emoji = '📜'; // Lecaps
@@ -503,6 +504,35 @@ function createVisualDiagram(type) {
         <span style="color: var(--primary); white-space: nowrap;">● 50% Necesidades</span>
         <span style="color: var(--color-moderate); white-space: nowrap;">● 30% Deseos</span>
         <span style="color: var(--color-conservative); white-space: nowrap;">● 20% Ahorro</span>
+      </div>
+    `;
+  } else if (type === 'shield-emergency') {
+    container.innerHTML = `
+      <div class="visual-shield" style="border-color: var(--color-conservative); box-shadow: 0 0 20px var(--color-conservative-glow); font-size: 2.8rem; gap: 0.5rem; display: flex; align-items: center; justify-content: center;">
+        <span>🛡️</span><span>🛟</span>
+      </div>
+      <span class="visual-title" style="color: var(--color-conservative); font-weight: 700;">Fondo de Emergencia = Tu Escudo</span>
+    `;
+  } else if (type === 'emergency-target') {
+    container.innerHTML = `
+      <div style="text-align: center; font-family: var(--font-title); width: 220px; border: 1px solid var(--glass-border); padding: 1.25rem; border-radius: 18px; background: var(--bg-secondary);">
+        <div style="font-size: 0.75rem; color: var(--text-secondary)">META DE AHORRO</div>
+        <div style="font-size: 1.8rem; font-weight: 800; color: #fff; margin: 0.25rem 0;">3 a 6 Meses</div>
+        <div style="font-size: 0.65rem; color: var(--color-conservative); font-weight: 600;">De tus gastos fijos indispensables</div>
+      </div>
+    `;
+  } else if (type === 'emergency-liquidity') {
+    container.innerHTML = `
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <div style="text-align: center; border: 1px solid var(--glass-border); padding: 0.75rem; border-radius: 12px; background: rgba(0,230,118,0.04); border-color: var(--color-conservative)">
+          <div style="font-size: 0.65rem; color: var(--text-secondary)">LIQUIDEZ</div>
+          <div style="font-size: 1.2rem; color: var(--color-conservative); font-weight: 700;">100% Disponible</div>
+        </div>
+        <div style="font-size: 1.5rem;">⚡</div>
+        <div style="text-align: center; border: 1px solid var(--glass-border); padding: 0.75rem; border-radius: 12px; background: rgba(255,255,255,0.02)">
+          <div style="font-size: 0.65rem; color: var(--text-secondary)">INVERSIÓN</div>
+          <div style="font-size: 1.2rem; color: #fff; font-weight: 700;">Money Market 🏦</div>
+        </div>
       </div>
     `;
   } else if (type === 'needs-card') {

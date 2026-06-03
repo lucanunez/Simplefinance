@@ -7,6 +7,11 @@ export const glossary = [
     definition: "La parte de tus ingresos que no gastas y decides guardar para el futuro. Es el cimiento de toda salud financiera."
   },
   {
+    term: "Fondo de Emergencia",
+    category: "finance",
+    definition: "Un colchón de dinero (equivalente a 3 a 6 meses de tus gastos mensuales básicos) reservado exclusivamente para cubrir imprevistos urgentes (como problemas de salud, reparaciones del auto o pérdida de empleo) sin endeudarte."
+  },
+  {
     term: "TNA (Tasa Nominal Anual)",
     category: "finance",
     definition: "Es el interés teórico que te paga una inversión (o te cobra un préstamo) en un año completo, sin reinvertir las ganancias. Sirve de referencia rápida."
@@ -277,6 +282,52 @@ export const personalFinanceLessons = [
   },
   {
     id: "pf_5",
+    title: "El Fondo de Emergencia",
+    shortDesc: "Construye tu escudo protector contra los imprevistos de la vida.",
+    slides: [
+      {
+        title: "¿Qué es un Fondo de Emergencia?",
+        text: "Es un **colchón de dinero** guardado bajo llave (metafóricamente) que sirve únicamente para enfrentar gastos imprevistos y urgentes. No es para irse de vacaciones, ni para aprovechar ofertas. Es tu **tranquilidad mental** hecha dinero.",
+        visualType: "shield-emergency"
+      },
+      {
+        title: "¿Cuánto dinero debo tener?",
+        text: "La regla general dice que debes tener ahorrado entre **3 y 6 meses de tus gastos básicos de vida** (alquiler, comida, servicios). Si tus gastos vitales son $100.000 al mes, tu fondo ideal debería estar entre $300.000 y $600.000.",
+        visualType: "emergency-target"
+      },
+      {
+        title: "¿Dónde se guarda?",
+        text: "Debe guardarse en un lugar con **liquidez inmediata** (que puedas retirar en el acto) y que idealmente te dé rendimientos para no perder contra la inflación (como un FCI Money Market en Mercado Pago o Ualá, o cuentas remuneradas). ¡Nunca lo dejes quieto en pesos bajo el colchón!",
+        visualType: "emergency-liquidity"
+      }
+    ],
+    questions: [
+      {
+        questionText: "¿Para cuál de las siguientes situaciones está justificado usar tu Fondo de Emergencia?",
+        options: [
+          "Comprar un televisor último modelo que está en descuento de 50%",
+          "Pagar una consulta médica de urgencia y medicamentos recetados",
+          "Reservar las vacaciones soñadas en cuotas",
+          "Prestarle dinero a un amigo para que compre criptomonedas"
+        ],
+        correctIndex: 1,
+        explanation: "¡Correcto! Una emergencia de salud es un imprevisto vital y urgente. Los electrodomésticos en oferta y las vacaciones son deseos que deben planificarse con otro ahorro."
+      },
+      {
+        questionText: "Si tus gastos mínimos mensuales para vivir son $200.000, ¿cuál es el rango recomendado para tu Fondo de Emergencia?",
+        options: [
+          "Entre $10.000 y $50.000",
+          "Entre $100.000 y $200.000",
+          "Entre $600.000 y $1.200.000 (3 a 6 meses de gastos)",
+          "Cualquier monto superior a $5.000.000"
+        ],
+        correctIndex: 2,
+        explanation: "¡Excelente! 3 meses de gastos equivalen a $600.000 y 6 meses a $1.200.000. Este colchón te permite vivir con tranquilidad si te quedas temporalmente sin ingresos."
+      }
+    ]
+  },
+  {
+    id: "pf_6",
     title: "Uso Inteligente de Tarjetas de Crédito",
     shortDesc: "El manual definitivo para ganarle al banco y no caer en la trampa de la deuda.",
     slides: [
@@ -322,7 +373,7 @@ export const personalFinanceLessons = [
     ]
   },
   {
-    id: "pf_6",
+    id: "pf_7",
     title: "Saliendo de Deudas: Bola de Nieve vs Avalancha",
     shortDesc: "Dos poderosas estrategias matemáticas y psicológicas para recuperar tu libertad financiera.",
     slides: [
@@ -385,7 +436,7 @@ export const personalFinanceLessons = [
     slides: [
       {
         title: "¡Llegó la hora del Desafío Final!",
-        text: "Has aprendido sobre la regla 50/30/20, métodos de ahorro progresivos, el uso de tarjetas de crédito y cómo salir de deudas. Este mini-test evaluará lo aprendido. ¡Demuestra que estás listo para dominar tus finanzas y desbloquear el mundo de las inversiones!",
+        text: "Has aprendido sobre la regla 50/30/20, métodos de ahorro progresivos, el fondo de emergencia, el uso de tarjetas de crédito y cómo salir de deudas. Este mini-test evaluará lo aprendido. ¡Demuestra que estás listo para dominar tus finanzas y desbloquear el mundo de las inversiones!",
         visualType: "diploma-preview"
       }
     ],
@@ -433,6 +484,17 @@ export const personalFinanceLessons = [
         ],
         correctIndex: 2,
         explanation: "¡Excelente! Has respondido a la perfección. La Bola de Nieve se enfoca en victorias psicológicas rápidas y la Avalancha en optimización financiera."
+      },
+      {
+        questionText: "¿Qué es un Fondo de Emergencia y cuánto dinero se aconseja acumular en él?",
+        options: [
+          "Un dinero destinado a regalos de cumpleaños que debe ser de al menos 12 salarios",
+          "Un fondo guardado en la cuenta comitente que debe invertirse 100% en acciones arriesgadas",
+          "Un colchón equivalente a entre 3 y 6 meses de tus gastos básicos, reservado exclusivamente para cubrir imprevistos urgentes",
+          "Una cuenta corriente bancaria sin comisiones para retirar efectivo en el extranjero"
+        ],
+        correctIndex: 2,
+        explanation: "¡Espectacular! El Fondo de Emergencia te da estabilidad y paz mental para enfrentar imprevistos de la vida cotidiana sin tener que recurrir a deudas caras."
       }
     ]
   }
